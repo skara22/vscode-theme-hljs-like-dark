@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.0.1] - 2025-11-06
+
+### 🛠 Fixed
+
+- Updated README image paths to work on GitHub and VS Code Marketplace.
+- Updated repository links to `vscode-theme-hljs-like-dark`.
+
 ## [1.0.0] - 2025-11-06
 
 ### 🟢 Initial Release

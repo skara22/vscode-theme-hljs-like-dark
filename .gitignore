@@ -1,0 +1,6 @@
+node_modules/
+.vscode/
+*.vsix
+rgbColors.txt
+node_modules/
+package-lock.json

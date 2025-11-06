@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="no-js">
+  <head>
+    <!-- Komentar v HTML -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Highlighting Demo &amp; Token Showcase</title>
+
+    <meta name="description" content="Example page to test HTML syntax highlighting.">
+    <meta name="author" content="skara22">
+    <meta name="robots" content="index,follow">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;/svg&gt;">
+    <link rel="stylesheet" href="styles.css" media="all">
+
+    <style>
+      /* CSS comment */
+      :root {
+        --primary-color: #ff9800;
+        --accent-color: rgb(0, 188, 212);
+        --border-radius: 4px;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: #101114;
+        color: #e6e6e6;
+      }
+
+      body[data-debug="true"]::before {
+        content: "DEBUG MODE";
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 2px 6px;
+        background: #c62828;
+        font-size: 10px;
+      }
+
+      header#top-header > nav ul li a.active {
+        color: var(--accent-color);
+      }
+
+      .card[class~="primary"] {
+        border: 1px solid var(--primary-color);
+        border-radius: var(--border-radius);
+        padding: 1rem;
+        margin: 1rem 0;
+      }
+
+      .card[data-state="warning"] {
+        border-color: #ffc107;
+        background: rgba(255, 193, 7, 0.08);
+      }
+
+      a:hover,
+      a:focus {
+        text-decoration: underline;
+      }
+
+      input[type="checkbox"]:checked + label::before {
+        content: "✔ ";
+        color: lime;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          font-size: 14px;
+        }
+        .layout {
+          flex-direction: column;
+        }
+      }
+    </style>
+
+    <script>
+      // JavaScript comment
+      "use strict";
+
+      const state = {
+        clicks: 0,
+        theme: "dark"
+      };
+
+      function toggleTheme() {
+        const html = document.documentElement;
+        state.theme = html.dataset.theme === "dark" ? "light" : "dark";
+        html.dataset.theme = state.theme;
+        console.log(`Theme changed to: ${state.theme}`);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("btn-click");
+        if (!btn) return;
+
+        btn.addEventListener("click", (event) => {
+          state.clicks++;
+          btn.textContent = `Clicked ${state.clicks}×`;
+          console.debug("Button clicked", { event, state });
+        });
+      });
+    </script>
+  </head>
+
+  <body data-debug="true">
+    <header id="top-header" class="site-header">
+      <h1 class="title">HTML <span>&lt;Highlight&gt;</span> Demo</h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#intro" class="active">Intro</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#table">Table</a></li>
+          <li><a href="#entities">Entities</a></li>
+          <li><a href="#misc">Misc</a></li>
+        </ul>
+      </nav>
+      <button type="button" onclick="toggleTheme()">Toggle Theme</button>
+    </header>
+
+    <main class="layout">
+      <section id="intro" class="card primary" data-state="info">
+        <h2>Intro section</h2>
+        <p>
+          This page is designed to test
+          <strong>HTML</strong> + <em>CSS</em> + <code>JavaScript</code>
+          syntax highlighting in your theme.
+        </p>
+        <p>
+          Here is an <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+          external link</a> and an inline <code>&lt;code&gt;</code> sample.
+        </p>
+        <pre><code class="language-html">&lt;div class="example"&gt;Hello &amp; welcome!&lt;/div&gt;</code></pre>
+      </section>
+
+      <section id="forms" class="card" data-state="warning">
+        <h2>Forms &amp; inputs</h2>
+        <form action="/submit" method="post" autocomplete="on" novalidate>
+          <fieldset>
+            <legend>User info</legend>
+
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required autofocus>
+
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com">
+
+            <label for="age">Age:</label>
+            <input id="age" name="age" type="number" min="0" max="120" step="1" value="25">
+
+            <label>
+              <input type="checkbox" name="agree" value="yes" checked>
+              <span>I agree to the terms</span>
+            </label>
+
+            <label for="color">Favorite color:</label>
+            <input id="color" name="color" type="color" value="#ff9800">
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+              <option value="">-- select --</option>
+              <option value="sk" selected>Slovakia</option>
+              <option value="cz">Czech Republic</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="about">About you:</label>
+            <textarea id="about" name="about" rows="3" cols="40">Short text…</textarea>
+          </fieldset>
+
+          <button id="btn-click" type="button" data-role="counter">Clicked 0×</button>
+          <button type="submit">Submit form</button>
+          <button type="reset">Reset</button>
+        </form>
+      </section>
+
+      <section id="table" class="card primary" data-state="info">
+        <h2>Tables</h2>
+        <table class="demo-table" border="1" cellspacing="0" cellpadding="4">
+          <caption>Sample table</caption>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-odd">
+              <th scope="row">1</th>
+              <td data-label="Name">Alpha</td>
+              <td data-label="Value">42</td>
+            </tr>
+            <tr class="row-even">
+              <th scope="row">2</th>
+              <td>Beta</td>
+              <td>73</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Footer row</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section id="entities" class="card" data-state="info">
+        <h2>Entities &amp; special characters</h2>
+        <p>
+          HTML entities:
+          &amp; &lt; &gt; &quot; &apos; &copy; &reg; &euro; &nbsp; &mdash;
+        </p>
+        <p>
+          Unicode characters:
+          &#x2600; &#x2601; &#x2602; &#9733; &#128512;
+        </p>
+        <p>
+          Raw text in <code>&lt;pre&gt;</code>:
+        </p>
+        <pre>
+Line 1
+Line 2
+  Indented line 3
+        </pre>
+      </section>
+
+      <section id="misc" class="card primary" data-state="info">
+        <h2>Misc</h2>
+
+        <article aria-labelledby="article-title" data-id="123" hidden>
+          <h3 id="article-title">Hidden article</h3>
+          <p>This article is hidden using the <code>hidden</code> attribute.</p>
+        </article>
+
+        <figure>
+          <img src="https://via.placeholder.com/150x80" alt="Placeholder image" loading="lazy">
+          <figcaption>Figure with <code>&lt;img&gt;</code> and <code>&lt;figcaption&gt;</code></figcaption>
+        </figure>
+
+        <details>
+          <summary>Details / Summary</summary>
+          <p>Content inside the details element.</p>
+        </details>
+
+        <template id="row-template">
+          <li class="item" data-template="true">Template item</li>
+        </template>
+
+        <div id="shadow-host"></div>
+
+        <script>
+          // Simple script to attach a shadow root (for extra HTML/JS tokens)
+          (function () {
+            const host = document.getElementById("shadow-host");
+            if (!host) return;
+            const root = host.attachShadow({ mode: "open" });
+            root.innerHTML = `
+              <style>
+                .shadow-box { border: 1px dashed #888; padding: 4px; margin-top: 8px; }
+              </style>
+              <div class="shadow-box">Shadow DOM content</div>
+            `;
+          })();
+        </script>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>&copy; <span id="year"></span> HTML Highlighting Demo</small>
+      <script>
+        // tiny inline script for footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>

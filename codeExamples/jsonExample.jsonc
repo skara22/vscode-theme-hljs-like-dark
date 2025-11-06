@@ -1,0 +1,92 @@
+{
+  // === JSON Highlighting Demo ===
+  // Kompletny prehlad vsetkych datovych typov a struktur pre test temy.
+
+  "stringExample": "Hello, world!",
+  "numberExample": 12345,
+  "floatExample": 3.14159,
+  "booleanTrue": true,
+  "booleanFalse": false,
+  "nullValue": null,
+
+  // Arrays
+  "arrayExample": [
+    1,
+    2,
+    3,
+    "text",
+    true,
+    null,
+    { "nested": "object in array" }
+  ],
+
+  // Nested objects
+  "objectExample": {
+    "id": 42,
+    "name": "Alice",
+    "email": "alice@example.com",
+    "isActive": true,
+    "roles": ["admin", "editor", "user"],
+    "settings": {
+      "theme": "dark",
+      "notifications": {
+        "email": true,
+        "sms": false
+      }
+    }
+  },
+
+  // Complex mixed content
+  "mixedExample": {
+    "timestamp": "2025-11-05T13:45:00Z",
+    "price": 199.99,
+    "discount": 0.15,
+    "tags": ["sale", "new", "limited"],
+    "dimensions": {
+      "width": 120.5,
+      "height": 80.3,
+      "unit": "cm"
+    }
+  },
+
+  // Escapes and Unicode
+  "escapedStrings": "Line1\\nLine2\\tTabbed\\u2192Arrow →",
+  "emoji": "😀🔥💡",
+  
+  // Example with nested arrays and objects
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 999.99,
+      "specs": {
+        "cpu": "Intel i7",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Smartphone",
+      "price": 699.00,
+      "specs": {
+        "cpu": "Snapdragon 8 Gen 3",
+        "ram": "12GB",
+        "storage": "256GB"
+      }
+    }
+  ],
+
+  // Empty values and edge cases
+  "emptyArray": [],
+  "emptyObject": {},
+  "zeroValue": 0,
+  "negativeValue": -123,
+  "scientificNotation": 1.23e4,
+
+  // Multiline string (escaped)
+  "multilineString": "This is line one.\\nThis is line two.\\nEnd of message."
+
+  // Trailing comma below is NOT allowed in pure JSON,
+  // but tolerated in JSONC for highlighting tests.
+}

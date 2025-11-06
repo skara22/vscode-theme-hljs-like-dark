@@ -1,0 +1,35 @@
+{
+  "name": "hljs-like-theme-dark",
+  "displayName": "HLJS-like Dark",
+  "description": "Minimal dark theme inspired by highlight.js — crafted for developers who love clean syntax, balanced contrast, and perfect readability across C++, HTML, CSS, JS, PHP, and more.",
+  "version": "1.0.0",
+  "publisher": "Skara22",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": ["Themes"],
+  "icon": "icon.png",
+  "license": "MIT",
+  "galleryBanner": {
+    "color": "#1a1a1a",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skara22/vscode-theme-hljs-like-tuned.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skara22/vscode-theme-hljs-like-tuned/issues"
+  },
+  "homepage": "https://github.com/skara22/vscode-theme-hljs-like-tuned#readme",
+  "keywords": ["theme", "dark", "highlightjs", "c++", "html", "css", "php", "javascript", "json", "typescript"],
+  "contributes": {
+    "themes": [
+      {
+        "label": "HLJS-like Dark (tuned)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/hljs-like-dark.json"
+      }
+    ]
+  }
+}

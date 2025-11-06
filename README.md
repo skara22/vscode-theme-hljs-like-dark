@@ -31,27 +31,27 @@ The goal of this theme is to deliver a **balanced**, **readable**, and **consist
 
 > Example syntax highlighting in C++:
 
-![previewCpp](images\previewCpp.png)  
+![previewCpp](images/previewCpp.png)  
 
 Example syntax highlighting in HTML:
 
-![previewHtml](images\previewHtml.png)  
+![previewHtml](images/previewHtml.png)  
 
 Example syntax highlighting in CSS:
 
-![previewCss](images\previewCss.png)
+![previewCss](images/previewCss.png)
 
 Example syntax highlighting in PHP:
 
-![previewPhp](images\previewPhp.png)
+![previewPhp](images/previewPhp.png)
 
 Example syntax highlighting in JavaScript:
 
-![previewJs](images\previewJs.png)
+![previewJs](images/previewJs.png)
 
 Example syntax highlighting in JSON/JSONC:
 
-![previewJsonc](images\previewJsonc.png)
+![previewJsonc](images/previewJsonc.png)
 
 ---
 
@@ -100,27 +100,27 @@ Cieľom tejto témy je ponúknuť **vyvážený**, **čitateľný** a **konziste
 
 Príklad zvýraznenia syntaxe v jazyku C++:
  
-![previewCpp](images\previewCpp.png)
+![previewCpp](images/previewCpp.png)
 
 Príklad zvýraznenia syntaxe v jazyku HTML:
 
-![previewHtml](images\previewHtml.png)
+![previewHtml](images/previewHtml.png)
 
 Príklad zvýraznenia syntaxe v jazyku CSS:
 
-![previewCss](images\previewCss.png)
+![previewCss](images/previewCss.png)
 
 Príklad zvýraznenia syntaxe v jazyku PHP:
 
-![previewPhp](images\previewPhp.png)
+![previewPhp](images/previewPhp.png)
 
 Príklad zvýraznenia syntaxe v jazyku JavaScript:
 
-![previewJs](images\previewJs.png)
+![previewJs](images/previewJs.png)
 
 Príklad zvýraznenia syntaxe v jazyku JSON/JSONC:
 
-![previewJsonc](images\previewJsonc.png)
+![previewJsonc](images/previewJsonc.png)
 
 ---
 

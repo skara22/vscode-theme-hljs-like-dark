@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skara22/vscode-theme-hljs-like-tuned.git"
+    "url": "git+https://github.com/skara22/vscode-theme-hljs-like-dark.git"
   },
   "bugs": {
-    "url": "https://github.com/skara22/vscode-theme-hljs-like-tuned/issues"
+    "url": "https://github.com/skara22/vscode-theme-hljs-like-dark/issues"
   },
-  "homepage": "https://github.com/skara22/vscode-theme-hljs-like-tuned#readme",
+  "homepage": "https://github.com/skara22/vscode-theme-hljs-like-dark#readme",
   "keywords": ["theme", "dark", "highlightjs", "c++", "html", "css", "php", "javascript", "json", "typescript"],
   "contributes": {
     "themes": [
